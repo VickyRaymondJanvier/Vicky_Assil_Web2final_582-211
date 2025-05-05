@@ -1,3 +1,6 @@
-Projet final Web 2 - Serre Aquafolia
+## Serre Aquafolia
 
-#Ce projet est un projet scolaire
+Ce projet est un projet scolaire
+
+Projet final
+
