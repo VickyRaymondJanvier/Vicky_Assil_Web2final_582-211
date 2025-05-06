@@ -1,28 +1,129 @@
 /*----- Styles Généraux -----*/
 :root {
-    --gris-fonce: #3C3C3C;
-    --vert-fonce: #2F8032;
-    --vert-pale: #7FBE77;
-    --cyan: #91B7A4;
-    --blanc-rose: #F1E8F4;
+  --gris-fonce: #3C3C3C;
+  --vert-fonce: #2F8032;
+  --vert-pale: #7FBE77;
+  --cyan: #91B7A4;
+  --blanc-rose: #F1E8F4;
+  --font-inknut: 'Inknut_Antiqua', sans-serif;
+  --font-tt: 'tt_rounds_neue', sans-serif;
+}
 
+/*------ Section Header ------*/
+header {
+background-color: white;
+color: white;
+text-align: center;
+padding: 2rem 1rem;
+}
 
-    --font-inknut: 'Inknut_Antiqua', sans-serif;
-    --font-tt: 'tt_rounds_neue', sans-serif;
+/*------ CSS pour aligner la barre de navigation au centre. Ajouter un padding pour une meilleure clarté ------*/
+nav {
+display: flex;
+justify-content: center;
+gap: 1rem;
+padding: 1rem;
+background-color: var(--blanc-rose);
+}
 
+/*------ Enlever les checks qui nuisent à la beauté du site web ------*/
+input[type="radio"] {
+display: none;
+}
 
+/*------ CSS pour la stylisation des différents boutons ------*/
+.le-menu {
+background-color: var(--cyan);
+color: white;
+font-size: 1.1rem;
+width: 150px;
+height: 50px;
+border-radius: 4px;
+display: flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+transition: all 0.3s ease;
+overflow: hidden;
+}
 
+/*------ Ajout d'un hover pour styliser le tout ------*/
+.le-menu:hover {
+background-color: var(--vert-fonce);
+}
 
-  }
+/*------ Stylisation pour l'élément sélectionné ------*/
+input[type="radio"]:checked + .le-menu {
+background-color: var(--vert-fonce);
+height: 100px;
+}
 
-/*------ Section Hero ------*/
+/*------ CSS pour la direction initiale de la barre de navigation ------*/
+.groupe-menu {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
 
-
-/*------ CSS pour aligner le footer qui sera le site de base ainsi que le disclaimer pour les copyright. ------*/
-
+/*------ CSS pour aligner le footer ------*/
 footer {
+text-align: center;
+background-color: #464646;
+color: white; 
+padding: 15px; 
+}
+
+/*------ Stylisation initiale de l'icône burger ------*/
+.burger {
+display: none;
+font-size: 2rem;
+cursor: pointer;
+color: var(--gris-fonce);
+padding: 1rem;
+}
+
+/*------ Cacher le menu nav de base sur petit écran ------*/
+#menu-toggle {
+display: none;
+}
+
+/*------ Responsive design pour les petits écrans ------*/
+@media (max-width: 768px) {
+nav.menu-navigation {
+  display: none;
+  flex-direction: column;
+  gap: 0;
+  background-color: var(--blanc-rose);
+}
+
+/*------ Afficher le menu lorsque le checkbox est coché ------*/
+#menu-toggle:checked + .burger + nav.menu-navigation {
+  display: flex;
+}
+
+/*------ Afficher l'icône burger sur petit écran ------*/
+.burger {
+  display: block;
+  text-align: right;
+}
+
+/*------ Alignement des éléments du menu en colonne ------*/
+.groupe-menu {
+  width: 100%;
   text-align: center;
-  background-color: #464646;
-  color: white; 
-  padding: 15px; 
+}
+
+/*------ Réduire la taille des boutons du menu ------*/
+.le-menu {
+  width: 100%;
+  height: 60px;
+  border-radius: 0;
+  border-top: 1px solid #ddd;
+}
+
+/*------ Ajouter une couleur de fond lorsque l'option est sélectionnée ------*/
+input[type="radio"]:checked + .le-menu {
+  height: 60px;
+  background-color: var(--vert-fonce);
+}
 }

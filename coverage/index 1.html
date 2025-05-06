@@ -5,29 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Serre Aquafolia</title>
     <meta name="robots" content="noindex, nofollow">
-    <link rel="stylesheet" href="css/acceuil.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
     <header>
         <img src="./Images/Header_Image.png" alt="Les-serres">
 
-        <nav>
-            <div class="menu-group">
+       <!-- Burger temporaire, a modifier avec notre SVG de plante -->
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="burger">&#9776;</label>
+
+
+        <nav class="menu-navigation">
+            <div class="groupe-menu">
                 <input type="radio" name="menu" id="accueil" checked>
                 <label for="accueil" class="le-menu">Accueil</label>
             </div>
 
-            <div class="menu-group">
+            <div class="groupe-menu">
                 <input type="radio" name="menu" id="types">
                 <label for="types" class="le-menu">Types de plantes</label>
             </div>
 
-            <div class="menu-group">
+            <div class="groupe-menu">
                 <input type="radio" name="menu" id="conseils">
                 <label for="conseils" class="le-menu">Conseils</label>
             </div>
 
-            <div class="menu-group">
+            <div class="groupe-menu">
                 <input type="radio" name="menu" id="contact">
                 <label for="contact" class="le-menu">Contact</label>
             </div>
@@ -37,3 +42,4 @@
     <p>Page Accueil, pas de footer</p>
 </body>
 </html>
+
