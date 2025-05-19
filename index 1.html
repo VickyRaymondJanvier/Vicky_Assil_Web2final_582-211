@@ -1,45 +1,66 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Serre Aquafolia</title>
-    <meta name="robots" content="noindex, nofollow">
-    <link rel="stylesheet" href="css/main.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Les Serres Aquafolia</title>
+  <link rel="stylesheet" href="main.css" />
 </head>
 <body>
-    <header>
-        <img src="./Images/Header_Image.png" alt="Les-serres">
+  <header>
+    <img src="./Images/Header_Image.png" alt="Les Serres Aquafolia" />
 
-       <!-- Burger temporaire, a modifier avec notre SVG de plante -->
-        <input type="checkbox" id="menu-toggle">
-        <label for="menu-toggle" class="burger">&#9776;</label>
+    <nav class="menu-container">
+      <button class="menu-button" onclick="toggleMenu()">☰</button>
+      <ul class="dropdown" id="dropdownMenu">
+        <li><a href="index 1.html">Accueil</a></li>
+        <li><a href="index 2.html">Type de Plantes</a></li>
+        <li><a href="index 3.html">Conseils</a></li>
+        <li><a href="index 4.html">Contacts</a></li>
+      </ul>
+    </nav>
+  </header>
 
+  <main>
+    <div class="main-content">
+      <section class="content">
+        <p>
+          Les serres AQUAFOLIA est le plus important producteur et fournisseur de plantes aquatiques et d’aquarium au Québec.
+          <br><br>
+          Nous vous proposons une excellente gamme de produits pour contrer plusieurs problèmes de qualité d’eau comme l’algue filamenteuse, l’algue sur les rochers (roches), la vase au fond du bassin, l’eau brouillée, etc.
+          <br><br>
+          Chez les Serres Aquafolia, les produits que nous vendons sont ceux que nous utilisons.
+          <br><br>
+          Nos produits sont disponibles dans les meilleures jardineries au Québec et dans l’est de l’Ontario.  Pour connaître nos points de vente, communiquez avec nous par courriel à<br>
+          <a href="mailto:info@lesserresaquafolia.com">info@lesserresaquafolia.com</a>
+        </p>
+      </section>
+<aside></aside>
+      <section class="login-form">
+        <h3>Accès membre :</h3>
+        <form>
+          <label for="paysagistes">Paysagistes</label><br>
+          <input type="password" id="paysagistes" name="paysagistes" placeholder="Mot de passe" /><br>
+          <button type="submit">Valider</button>
+        </form>
+        <form>
+          <label for="centre-jardin">Centre-Jardin</label><br>
+          <input type="password" id="centre-jardin" name="centre-jardin" placeholder="Mot de passe" /><br>
+          <button type="submit">Valider</button>
+        </form>
+      </section>
+    </div>
+</aside>
+    <section class="bottom-button">
+      <a href="index - 2.html"><button class="green-button-opacity">Pour en savoir plus sur nos plantes</button></a>
+    </section>
+  </main>
 
-        <nav class="menu-navigation">
-            <div class="groupe-menu">
-                <input type="radio" name="menu" id="accueil" checked>
-                <label for="accueil" class="le-menu">Accueil</label>
-            </div>
-
-            <div class="groupe-menu">
-                <input type="radio" name="menu" id="types">
-                <label for="types" class="le-menu">Types de plantes</label>
-            </div>
-
-            <div class="groupe-menu">
-                <input type="radio" name="menu" id="conseils">
-                <label for="conseils" class="le-menu">Conseils</label>
-            </div>
-
-            <div class="groupe-menu">
-                <input type="radio" name="menu" id="contact">
-                <label for="contact" class="le-menu">Contact</label>
-            </div>
-        </nav>
-    </header>
-
-    <p>Page Accueil, pas de footer</p>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("dropdownMenu");
+      menu.classList.toggle("show");
+    }
+  </script>
 </body>
 </html>
-

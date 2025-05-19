@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Plantes Flottantes</title>
+  <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+  <header>
+    <img src="./Images/Header_Image.png" alt="Les Serres Aquafolia" />
+
+    <nav class="menu-container">
+      <button class="menu-button" onclick="toggleMenu()">☰</button>
+      <ul class="dropdown" id="dropdownMenu">
+        <li><a href="index 1.html">Accueil</a></li>
+        <li><a href="index 2.html">Type de Plantes</a></li>
+        <li><a href="index 3.html">Conseils</a></li>
+        <li><a href="index 4.html">Contacts</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="banner">
+    <h1>Plantes flottantes</h1>
+  </section>
+
+  <main class="plant-section">
+    <div class="plant-text">
+      <div class="text-block">
+        <p>
+          Les plantes flottantes vivent à la surface de l’eau, sans être enracinées dans le fond. Elles flottent librement grâce à des tissus remplis d’air ou des structures spécifiques. On les retrouve souvent dans les étangs, les mares, les rizières ou les bassins décoratifs.
+        </p>
+      </div>
+      <hr />
+      <div class="text-block">
+        <p>
+          <strong>Caractéristiques principales :</strong><br>
+          - Racines suspendues dans l’eau (non ancrées dans le sol)<br>
+          - Se déplacent au gré du vent ou des courants<br>
+          - Absorbent les nutriments directement de l’eau<br>
+          - Aident à filtrer l’eau et à limiter les algues<br>
+          - Offrent de l’ombre et un refuge à la faune aquatique
+        </p>
+      </div>
+      <hr />
+      <div class="text-block">
+        <p>
+          <strong>Exemples populaires :</strong><br>
+          - Lentille d’eau (Lemna minor) : très petite, forme des tapis verts denses<br>
+          - Jacinthe d’eau (Eichhornia crassipes) : belles fleurs mauves, croissance rapide<br>
+          - Laitue d’eau (Pistia stratiotes) : ressemble à une petite laitue flottante
+        </p>
+      </div>
+    </div>
+
+    <div class="plant-images">
+      <img src="image1.jpg" alt="Plante 1" />
+      <img src="image2.jpg" alt="Plante 2" />
+      <img src="image3.jpg" alt="Plante 3" />
+    </div>
+  </main>
+
+  <footer>
+    <p>info@lesserresaquafolia.com</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("dropdownMenu");
+      menu.classList.toggle("show");
+    }
+  </script>
+</body>
+</html>

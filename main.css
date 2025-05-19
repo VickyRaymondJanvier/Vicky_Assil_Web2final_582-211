@@ -1,0 +1,299 @@
+/* Base styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  color: #333;
+}
+
+header img {
+  width: 100%;
+  height: auto;
+}
+
+.separator {
+  height: 5px;
+  background-color: #ccc;
+}
+
+/* Menu burger par défaut (mobile) */
+.menu-container {
+  position: relative;
+  padding: 10px;
+  background-color: #2c2c2c;
+  text-align: right;
+}
+
+.menu-button {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  color: white;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  right: 10px;
+  top: 45px;
+  background-color: #4CAF50;
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 1;
+  width: 70%;
+}
+
+.dropdown li {
+  list-style: none;
+}
+
+.dropdown a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.dropdown a:hover {
+  background-color: #45a049;
+}
+
+.show {
+  display: block;
+}
+
+/* Contenu principal */
+main {
+  padding: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.content p {
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.green-button {
+  display: block;
+  width: 80%;
+  margin: 20px auto;
+  background-color: rgba(76, 175, 80, 0.4);
+  color: white;
+  padding: 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.green-button:hover {
+  background-color: rgba(76, 175, 80, 0.6);
+}
+
+.image-section {
+  text-align: center;
+  margin-top: 20px;
+  position: relative;
+}
+
+.image-section img {
+  width: 100%;
+  height: auto;
+}
+
+.login-button {
+  margin-top: 10px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #45a049;
+}
+
+/* Formulaire de connexion */
+.login-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.login-form {
+  background-color: #d5f2dc;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.login-form h3 {
+  margin-top: 0;
+}
+
+.login-form label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.login-form button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Bannière arrondie verte */
+.banner {
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 32px;
+  font-weight: bold;
+  width: 60%;
+  margin: 20px auto;
+  border-radius: 20px;
+}
+
+/* Section plantes flottantes */
+.plant-section {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  max-width: 1100px;
+  margin: auto;
+  gap: 20px;
+}
+
+.plant-text {
+  flex: 1;
+}
+
+.plant-text .text-block {
+  margin-bottom: 20px;
+  font-size: 20px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.plant-text hr {
+  border: none;
+  border-top: 2px solid #ccc;
+  margin: 20px 0;
+}
+
+.plant-images {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.plant-images img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 16px;
+}
+
+/* Responsive - Desktop */
+@media (min-width: 768px) {
+  .menu-button {
+    display: none;
+  }
+
+  .dropdown {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    justify-content: center;
+    background: none;
+    padding: 20px;
+    width: 100%;
+    gap: 20px;
+  }
+
+  .dropdown a {
+    background-color: #4CAF50;
+    border-radius: 20px;
+    padding: 25px 30px;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s;
+  }
+
+  .dropdown a:hover {
+    background-color: #45a049;
+  }
+
+  .menu-container {
+    text-align: center;
+    padding: 0;
+    background-color: #2c2c2c;
+  }
+
+  .content {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .image-section {
+    width: 60%;
+  }
+
+  .login-wrapper {
+    width: 35%;
+  }
+
+  .plant-section {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .plant-text {
+    flex: 2;
+    padding-right: 30px;
+  }
+
+  .plant-images {
+    flex: 1;
+  }
+}
