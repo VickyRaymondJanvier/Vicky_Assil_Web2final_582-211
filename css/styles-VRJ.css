@@ -125,14 +125,14 @@ section {
   margin: 0 2vw;
 }
 
-li {
+.listePlantes {
   display: flex;
   justify-content: center;
   align-items:center ;
-  width: 23%;
+  width: 32%;
   aspect-ratio: 1/1;
   margin: 1vh 0;
-  background-color: #2F8032;
+  background-color: #638764;
   border-radius: 13%;
 }
 
@@ -144,6 +144,10 @@ li {
   list-style-type:none;
   padding: 0;
   align-items: center;
+}
+
+.planteSpecifique {
+  padding: 5%;
 }
 
 
