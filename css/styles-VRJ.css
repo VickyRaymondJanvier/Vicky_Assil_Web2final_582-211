@@ -9,10 +9,6 @@
 
     --font-inknut: 'Inknut_Antiqua', sans-serif;
     --font-tt: 'tt_rounds_neue', sans-serif;
-
-
-
-
   }
 
 /*------ Section Hero ------*/
@@ -29,6 +25,10 @@ body {
   margin: auto;
   padding: 20px;
   background-color: #fff;
+}
+
+header img {
+  height: 5vh;
 }
 
 .banner {
