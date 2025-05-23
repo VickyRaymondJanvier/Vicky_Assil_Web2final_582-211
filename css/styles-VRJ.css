@@ -299,7 +299,7 @@ section {
 
 
   /* TYPE DE PLANTES */
- 
+
     :root {
       --gris-fonce: #3C3C3C;
       --vert-fonce: #2F8032;
@@ -324,7 +324,13 @@ section {
     .header-image {
       width: 100%;
       height: 150px;
-      background: url('/Images/banniere_type_plantes.png') no-repeat center/cover;
+      background: linear-gradient(135deg, #7FBE77, #2F8032);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 2rem;
+      font-weight: bold;
     }
 
     nav {
@@ -349,7 +355,7 @@ section {
     }
 
     main {
-      padding: 1rem;
+      padding: 2rem 4rem;
     }
 
     section {
@@ -357,7 +363,7 @@ section {
     }
 
     h2 {
-      font-size: 1.2rem;
+      font-size: 1.5rem;
       color: #333;
       margin-bottom: 0.5rem;
     }
@@ -413,109 +419,6 @@ section {
       transform: scale(1.05);
     }
 
-    /* Images pour les plantes aquatiques */
-    .categorie button[data-img="plantes_flottantes"] {
-      background-image: url('/Images/type_plantes/aquatique/plantes_flottantes.png');
-    }
-
-    .categorie button[data-img="plantes_immergees"] {
-      background-image: url('/Images/type_plantes/aquatique/plantes_immergees.jpeg');
-    }
-
-    .categorie button[data-img="plantes_emergentes"] {
-      background-image: url('/Images/type_plantes/aquatique/plantes_emergentes.png');
-    }
-
-    .categorie button[data-img="plantes_flottantes_enracinees"] {
-      background-image: url('/Images/type_plantes/aquatique/plantes_flottantes_enracinees.jpg');
-    }
-
-    /* Images pour les plantes tropicales */
-    .categorie button[data-img="plantes_feuillage_decoratif"] {
-      background-image: url('/Images/type_plantes/tropicales/plantes_feuillage_decoratif.png');
-    }
-
-    .categorie button[data-img="plantes_fleurs_exotiques"] {
-      background-image: url('/Images/type_plantes/tropicales/plantes_fleurs_exotiques.png');
-    }
-
-    .categorie button[data-img="plantes_grimpantes"] {
-      background-image: url('/Images/type_plantes/tropicales/plantes_grimpantes.jpg');
-    }
-
-    .categorie button[data-img="plantes_fruitieres_tropicales"] {
-      background-image: url('/Images/type_plantes/tropicales/plantes_fruitieres_tropicales.jpg');
-    }
-
-    .categorie button[data-img="aquatiques_tropicales"] {
-      background-image: url('/Images/type_plantes/tropicales/aquatiques_tropicales.jpg');
-    }
-
-    /* Images pour les succulentes */
-    .categorie button[data-img="cactus"] {
-      background-image: url('/Images/type_plantes/succulentes/cactus.jpg');
-    }
-
-    .categorie button[data-img="crassulacees"] {
-      background-image: url('/Images/type_plantes/succulentes/crassulacees.webp');
-    }
-
-    .categorie button[data-img="aloe_gasteria"] {
-      background-image: url('/Images/type_plantes/succulentes/les_aloe_et_les_gasteria.png');
-    }
-
-    .categorie button[data-img="euphorbes"] {
-      background-image: url('/Images/type_plantes/succulentes/euphorbes_succulentes.png');
-    }
-
-    .categorie button[data-img="lithops_mini"] {
-      background-image: url('/Images/type_plantes/succulentes/lithops_et_mini-succulentes.webp');
-    }
-
-    /* Images pour les vivaces */
-    .categorie button[data-img="vivaces_fleurs"] {
-      background-image: url('/Images/type_plantes/vivaces/vivaces_fleurs.jpg');
-    }
-
-    .categorie button[data-img="vivaces_feuillage"] {
-      background-image: url('/Images/type_plantes/vivaces/vivaces_feuillage_decoratif.jpg');
-    }
-
-    .categorie button[data-img="vivaces_couvre_sol"] {
-      background-image: url('/Images/type_plantes/vivaces/vivaces_couvre_sol.jpg');
-    }
-
-    .categorie button[data-img="vivaces_grimpantes"] {
-      background-image: url('/Images/type_plantes/vivaces/vivaces_grimpantes.jpg');
-    }
-
-    /* Images pour les annuelles */
-    .categorie button[data-img="annuelles_floraison"] {
-      background-image: url('/Images/type_plantes/annuelles/annuelles_floraison_abondante.png');
-    }
-
-    .categorie button[data-img="annuelles_comestibles"] {
-      background-image: url('/Images/type_plantes/annuelles/annuelles_comestibles.webp');
-    }
-
-    .categorie button[data-img="annuelles_grimpantes_btn"] {
-      background-image: url('/Images/type_plantes/annuelles/annuelles_grimpantes.png');
-    }
-
-    .categorie button[data-img="annuelles_retombantes"] {
-      background-image: url('/Images/type_plantes/annuelles/annuelles_retombantes.jpg');
-    }
-
-    @font-face {
-      font-family: 'tt_rounds_neue';
-      src: url('/polices/tt_rounds_neue/TT\ Rounds\ Neue\ Trial\ Black.ttf');
-    }
-    
-    @font-face {
-      font-family: 'Inknut_Antiqua';
-      src: url('/polices/Inknut_Antiqua/InknutAntiqua-Regular.ttf');
-    }
-
     .footer {
       position: relative;
       display: flex;
@@ -524,7 +427,7 @@ section {
       background-color: var(--gris-fonce);
       color: white;
       font-family: Arial, sans-serif;
-      padding: 10px 10px 15px 10px;
+      padding: 30px 10px; /* Augmenté le padding vertical de 10px à 30px */
     }
 
     .footer-content {
@@ -598,10 +501,13 @@ section {
       height: 150px;
       border-radius: 20px 0 0 0;
       overflow: hidden;
-      background-image: url("../Images/grenouille.png");
-      background-size: cover;
-      background-position: center;
+      background: linear-gradient(45deg, #4CAF50, #45a049);
       z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 2rem;
     }
 
     .email-block {
@@ -635,6 +541,11 @@ section {
       .footer {
         justify-content: center;
         text-align: center;
+        padding: 40px 10px; /* Augmenté encore plus sur mobile pour compenser l'absence de la grenouille */
+      }
+
+      main {
+        padding: 1rem;
       }
     }
 
@@ -663,226 +574,9 @@ section {
       .logo-aquafolia {
         font-size: 24px;
       }
+
+      .footer {
+        padding: 35px 10px; /* Maintien d'un bon espacement même sur très petits écrans */
+      }
     }
-
-    nav {
-      justify-content: center;
-    }
-
-    h2 {
-      font-size: 1.5rem;
-    }
-
-    main {
-      padding: 2rem 4rem;
-    }
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /* MENUS */
-     :root {
-            --gris-fonce: #3C3C3C;
-            --vert-fonce: #2F8032;
-            --vert-pale: #7FBE77;
-            --cyan: #91B7A4;
-            --blanc-rose: #F1E8F4;
-            --font-inknut: 'Inknut_Antiqua', sans-serif;
-            --font-tt: 'tt_rounds_neue', sans-serif;
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #fff;
-            color: var(--gris-fonce);
-        }
-
-        @font-face {
-            font-family: 'Inknut_Antiqua';
-            src: url('/polices/Inknut_Antiqua/InknutAntiqua-Light.ttf') format('truetype');
-        }
-
-        header {
-            font-family: var(--font-inknut);
-        }
-
-        /* Menu burger par défaut (mobile) */
-        .menu-container {
-            position: relative;
-            padding: 10px;
-            background-color: var(--gris-fonce);
-            text-align: right;
-        }
-
-        .menu-button {
-            font-size: 24px;
-            background: none;
-            border: none;
-            cursor: pointer;
-            display: inline-block;
-            color: white;
-        }
-
-        .dropdown {
-            display: none;
-            position: absolute;
-            right: 10px;
-            top: 45px;
-            background-color: #4CAF50;
-            border-radius: 5px;
-            overflow: hidden;
-            z-index: 1;
-            width: 70%;
-            margin: 0;
-            padding: 0;
-        }
-
-        .dropdown li {
-            list-style: none;
-        }
-
-        .dropdown a {
-            display: block;
-            padding: 15px;
-            text-decoration: none;
-            color: white;
-            text-align: center;
-            font-size: 18px;
-            font-weight: bold;
-            transition: background-color 0.3s;
-        }
-
-        .dropdown a:hover {
-            background-color: #45a049;
-        }
-
-        /* État actif pour mobile */
-        .dropdown a.active {
-            background-color: var(--vert-fonce);
-            font-weight: bolder;
-        }
-
-        .show {
-            display: block;
-        }
-
-        /* Responsive - Desktop */
-        @media (min-width: 768px) {
-            .menu-button {
-                display: none;
-            }
-
-            .menu-container {
-                text-align: center;
-                padding: 0;
-                background-color: var(--gris-fonce);
-                height: 50px; /* Hauteur fixe réduite pour la barre noire */
-                position: relative; /* Pour positionner les boutons */
-            }
-
-            .dropdown {
-                display: flex !important;
-                position: absolute;
-                top: 50%; /* Centre verticalement dans la barre */
-                transform: translateY(-50%); /* Ajuste pour centrer parfaitement */
-                left: 0;
-                right: 0;
-                flex-direction: row;
-                justify-content: center;
-                background: none;
-                padding: 0 20px;
-                width: 100%;
-                gap: 20px;
-                margin: 0;
-            }
-
-            .dropdown a {
-                background-color: var(--cyan);
-                border-radius: 20px;
-                padding: 12px 30px;
-                font-size: 18px;
-                color: white;
-                font-weight: bold;
-                text-align: center;
-                transition: all 0.3s ease;
-                min-width: 150px;
-                transform-origin: top;
-            }
-
-            .dropdown a:hover {
-                background-color: var(--vert-pale);
-                padding: 20px 30px; /* Augmente seulement le padding vertical au hover */
-                box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-            }
-
-            /* État actif pour desktop */
-            .dropdown a.active {
-                background-color: var(--vert-fonce);
-                box-shadow: 0 4px 12px rgba(47, 128, 50, 0.4);
-                /* Pas d'agrandissement permanent pour l'état actif */
-            }
-
-            .dropdown a.active:hover {
-                background-color: var(--vert-fonce);
-                padding: 20px 30px; /* Agrandissement seulement au hover */
-                box-shadow: 0 6px 16px rgba(47, 128, 50, 0.5);
-            }
-        }
-
-        /* Contenu de démonstration */
-        .demo-content {
-            padding: 40px 20px;
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .demo-content h1 {
-            color: var(--vert-fonce);
-            margin-bottom: 20px;
-        }
-
-        .demo-content p {
-            line-height: 1.6;
-            margin-bottom: 15px;
-        }
+  
