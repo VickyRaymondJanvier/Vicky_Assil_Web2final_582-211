@@ -7,6 +7,9 @@
   <link rel="stylesheet" href="../css/type-plantes.css">
     <link rel="stylesheet" href="../css/main.css">
   
+  <style>
+    
+  </style>
 </head>
 <body>
   <header>
@@ -82,12 +85,11 @@
   
   
     <script>
-   function toggleMenu() {
+        function toggleMenu() {
             const dropdown = document.getElementById('dropdownMenu');
             dropdown.classList.toggle('show');
         }
 
-  
         window.onclick = function(event) {
             if (!event.target.matches('.menu-button')) {
                 const dropdown = document.getElementById('dropdownMenu');
@@ -95,17 +97,6 @@
                     dropdown.classList.remove('show');
                 }
             }
-        }
-
-       
-        function setActiveMenuItem(pageName) {
-            const menuItems = document.querySelectorAll('.dropdown a');
-            menuItems.forEach(item => {
-                item.classList.remove('active');
-                if (item.textContent.toLowerCase().includes(pageName.toLowerCase())) {
-                    item.classList.add('active');
-                }
-            });
         }
 </script>
 
