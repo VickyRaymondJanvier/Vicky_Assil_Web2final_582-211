@@ -1,4 +1,4 @@
-*{
+footer*{
   box-sizing: border-box;
 }
 
@@ -357,3 +357,141 @@ footer {
 
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      @font-face {
+  font-family: 'tt_rounds_neue';
+  src: url('/polices/tt_rounds_neue/TT\ Rounds\ Neue\ Trial\ Black.ttf'),
+}
+      .footer {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--gris-fonce);
+        color: white;
+        font-family: Arial, sans-serif;
+        padding: 10px 10px 15px 10px;
+      }
+
+      .footer-content {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+      }
+
+      .logos {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .logo-serres,
+      .logo-aquafolia {
+        background-color: white;
+        color: var(--vert-fonce);
+        font-weight: bold;
+        padding: 4px 10px;
+        display: inline-block;
+        font-size: 22px;
+        font-family: "Georgia", serif;
+        width: fit-content;
+      }
+
+      .logo-aquafolia {
+        font-size: 30px;
+        position: relative;
+      }
+
+      .logo-aquafolia::after {
+        content: "";
+        display: block;
+        height: 6px;
+        background-color: var(--vert-fonce);
+        width: 100%;
+        transform: skewX(-15deg);
+        margin-top: 2px;
+      }
+
+      .email-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+
+    .email {
+  font-size: 18px;
+  color: white;
+  text-decoration: underline;
+  transition: color 0.3s;
+  font-family: var(--font-tt);
+}
+
+  .email:hover {
+    color: var(--vert-pale);
+  }
+
+  .email:active {
+    color: var(--vert-fonce);
+  }
+      .footer-right {
+        position: absolute;
+        right: 20px;
+        top: -152px; /* ← dépassement vers le haut */
+        width: 260px;
+        height: 260px;
+        border-radius: 30px;
+        overflow: hidden;
+        background-image: url("./Images/grenouille.png");
+        background-size: cover;
+        background-position: center;
+      }
+
+      .email-block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+  .droits {
+    font-size: 14px;
+    color: white;
+    margin-top: 5px;
+    font-family: var(--font-tt);
+  }
