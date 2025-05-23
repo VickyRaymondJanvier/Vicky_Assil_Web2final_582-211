@@ -1,101 +1,92 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Type de Plantes</title>
-    <meta name="robots" content="noindex, nofollow">
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/styles-VRJ.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Types de Plantes</title>
+  <link rel="stylesheet" href="../css/type-plantes.css">
+  
+  <style>
+    
+  </style>
 </head>
 <body>
-    <header>
-       <!-- Burger temporaire, a modifier avec notre SVG de plante 
-        <input type="checkbox" id="menu-toggle">
-        <label for="menu-toggle" class="burger">&#9776;</label>-->
+  <header>
+    <div class="header-image"></div>
 
-        <img src="../Images/banniere_type_plantes.png" alt="Les Serres Aquafolia" />
-        
-            <nav class="menu-container">
-              <button class="menu-button" onclick="toggleMenu()">☰</button>
-              <ul class="dropdown" id="dropdownMenu">
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="type-plantes.html">Type de Plantes</a></li>
-                <li><a href="conseil.html">Conseils</a></li>
-                <li><a href="contact.html">Contacts</a></li>
-              </ul>
-            </nav>
-    </header>
+          <nav class="menu-container">
+          <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Navigation - Plantes</title>
+        </nav>
+  </header>
 
-<section>
-    <h1>Aquatiques</h1>
-    <ul class="typePlantes">
-        <li class="listePlantes"><a href="plantes-flottantes.html">Plantes Flottantes</a></li>
-        <li class="listePlantes"><a href="">Plantes immergées</a></li>
-        <li class="listePlantes"><a href="">Plantes émergentes</a></li>
-        <li class="listePlantes"><a href="">Plantes à feuilles flottantes enracinées</a></li>
-      </ul>
+  <main>
+    <section>
+      <h2>Aquatiques</h2>
+      <div class="categorie">
+        <button data-img="plantes_flottantes"><span>Plantes Flottantes</span></button>
+        <button data-img="plantes_immergees"><span>Plantes Immergées</span></button>
+        <button data-img="plantes_emergentes"><span>Plantes Émergentes</span></button>
+        <button data-img="plantes_flottantes_enracinees"><span>Plantes à Feuilles Flottantes Enracinées</span></button>
+      </div>
     </section>
 
+    <section>
+      <h2>Tropicales</h2>
+      <div class="categorie">
+        <button data-img="plantes_feuillage_decoratif"><span>Plantes à Feuillage Décoratif</span></button>
+        <button data-img="plantes_fleurs_exotiques"><span>Plantes à Fleurs Exotiques</span></button>
+        <button data-img="plantes_grimpantes"><span>Plantes Grimpantes</span></button>
+        <button data-img="plantes_fruitieres_tropicales"><span>Plantes Fruitières Tropicales</span></button>
+        <button data-img="aquatiques_tropicales"><span>Aquatiques Tropicales</span></button>
+      </div>
+    </section>
 
-    <section >
-    <h1>Tropicales</h1>
-        <ul class="typePlantes">
-            <li class="listePlantes"><a href="">Plantes à Feuillage Décoratif</a></li>
-            <li class="listePlantes"><a href="">Plantes à Fleurs Exotiques</a></li>
-            <li class="listePlantes"><a href="">Plantes Grimpantes</a></li>
-            <li class="listePlantes"><a href="">Plantes Fruitières Tropicales</a></li>
-            <li class="listePlantes"><a href="">Aquatiques Tropicales</a></li>
-          </ul>
-        </section>
-    
+    <section>
+      <h2>Succulentes</h2>
+      <div class="categorie">
+        <button data-img="cactus"><span>Les Cactus</span></button>
+        <button data-img="crassulacees"><span>Les Crassulacées</span></button>
+        <button data-img="aloe_gasteria"><span>Les Aloe et les Gasteria</span></button>
+        <button data-img="euphorbes"><span>Euphorbes Succulentes</span></button>
+        <button data-img="lithops_mini"><span>Les Lithops & Les mini-Succulentes</span></button>
+      </div>
+    </section>
 
-        <section>
-            <h1>Succulentes</h1>
-            <ul class="typePlantes">
-                <li class="listePlantes"><a href="" class="planteSpecifique">Les Cactus</a></li>
-                <li class="listePlantes"><a href="" class="planteSpecifique">Les crassulacées</a></li>
-                <li class="listePlantes"><a href="" class="planteSpecifique">Les Aloe et les Gasteria</a></li>
-                <li class="listePlantes"><a href="" class="planteSpecifique">Euphorbes succulentes</a></li>
-                <li class="listePlantes"><a href="" class="planteSpecifique">Les Lithops & Les mini-Succulentes</a></li>
-              </ul>
-            </section>
+    <section>
+      <h2>Vivaces</h2>
+      <div class="categorie">
+        <button data-img="vivaces_fleurs"><span>Les Vivaces à Fleurs</span></button>
+        <button data-img="vivaces_feuillage"><span>Les Vivaces à Feuillage Décoratif</span></button>
+        <button data-img="vivaces_couvre_sol"><span>Vivaces Couvre-sol</span></button>
+        <button data-img="vivaces_grimpantes"><span>Vivaces Grimpantes</span></button>
+      </div>
+    </section>
 
+    <section>
+      <h2>Annuelles</h2>
+      <div class="categorie">
+        <button data-img="annuelles_floraison"><span>Annuelles à Floraison Abondante</span></button>
+        <button data-img="annuelles_comestibles"><span>Annuelles Comestibles</span></button>
+        <button data-img="annuelles_grimpantes_btn"><span>Annuelles Grimpantes</span></button>
+        <button data-img="annuelles_retombantes"><span>Annuelles Retombantes</span></button>
+      </div>
+    </section>
+  </main>
 
-            <section>
-                <h1>Vivaces</h1>
-                <ul class="typePlantes">
-                    <li class="listePlantes"><a href="">Les Vivaces à Fleurs</a></li>
-                    <li class="listePlantes"><a href="">Les Vivaces à Feuillage Décoratif</a></li>
-                    <li class="listePlantes"><a href="">Vivaces Couvre-sol</a></li>
-                    <li class="listePlantes"><a href="">Vivaces Grimpantes</a></li>
-                  </ul>
-                </section>
-    
-
-                <section>
-                    <h1>Annuelles</h1>
-                    <ul class="typePlantes">
-                        <li class="listePlantes"><a href="">Annuelles à floraison abondante</a></li>
-                        <li class="listePlantes"><a href="">Annuelles comestibles</a></li>
-                        <li class="listePlantes"><a href="">Annuelles grimpantes</a></li>
-                        <li class="listePlantes"><a href="">Annuelles retombantes</a></li>
-                      </ul>
-                    </section>
-        
-        
-
-
-
-
-
-
-
-
-  
-    <Footer>
-        <a href="mailto:info@lesserresaquafolia.com">info@lesserresaquafolia.com</a> <br>
-        <p>©2025 Vicky et Assil, Montmorency. Tous droits réservés.</p>
-    </Footer>
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="logos">
+        <div class="logo-serres">LES SERRES</div>
+        <div class="logo-aquafolia">AQUAFOLIA</div>
+      </div>
+      <div class="email-container">
+        <a href="mailto:info@lesserresaquafolia.com" class="email">info@lesserresaquafolia.com</a>
+        <p class="droits">©2025 Vicky et Assil, Montmorency. Tous droits réservés.</p>
+      </div>
+    </div>
+    <div class="footer-right"></div>
+  </footer>
 </body>
 </html>
