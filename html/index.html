@@ -1,126 +1,79 @@
-<!-- Base d'un document html -->
-  <meta charset="UTF-8" />
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <!-- Pour supporter les caractères spéciaux -->
   <meta charset="UTF-8" />
-  
-  <!-- Pour que le site soit responsive -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  
-  <!-- Titre du document -->
   <title>Les Serres Aquafolia</title>
-  
-  <!-- Lien vers la feuille de style CSS externe pour styliser la page -->
   <link rel="stylesheet" href="../css/main.css">
 </head>
-
 <body>
-  <!-- ================== EN-TÊTE DE LA PAGE ================== -->
   <header>
-    <!-- Logo de l’entreprise (affiché en haut de la page) -->
     <img src="../Images/logo_accueil.png" alt="Les Serres Aquafolia" />
 
-    <!-- Menu de navigation principal -->
     <nav class="menu-container">
-      <!-- Bouton visible en mobile pour ouvrir le menu (hamburger menu) -->
       <button class="menu-button" onclick="toggleMenu()">☰</button>
-
-      <!-- Liste des liens du menu (cachée ou visible selon l'écran) -->
-      <ul class="dropdown" id="dropdownMenu">
-        <li><a href="index.html" class="active">Accueil</a></li>
-        <li><a href="type-plantes.html">Type de Plantes</a></li>
-        <li><a href="conseil.html">Conseils</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+            <ul class="dropdown" id="dropdownMenu">
+                <li><a href="index.html"class="active">Accueil</a></li>
+                <li><a href="type-plantes.html">Type de Plantes</a></li>
+                <li><a href="conseil.html">Conseils</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
     </nav>
   </header>
-
-  <!-- ================== CONTENU PRINCIPAL ================== -->
   <main>
     <div class="main-content">
-      <!-- Section de présentation de l’entreprise -->
       <section class="content">
         <p>
-          <!-- Texte de présentation avec des sauts de ligne -->
           Les serres AQUAFOLIA est le plus important producteur et fournisseur de plantes aquatiques et d’aquarium au Québec.
           <br><br>
-          Nous vous proposons une excellente gamme de produits pour contrer plusieurs problèmes de qualité d’eau comme :
-          l’algue filamenteuse, l’algue sur les rochers, la vase au fond du bassin, l’eau brouillée, etc.
+          Nous vous proposons une excellente gamme de produits pour contrer plusieurs problèmes de qualité d’eau comme l’algue filamenteuse, l’algue sur les rochers (roches), la vase au fond du bassin, l’eau brouillée, etc.
           <br><br>
-          Nos produits sont testés et utilisés directement dans nos propres serres.
+          Chez les Serres Aquafolia, les produits que nous vendons sont ceux que nous utilisons.
           <br><br>
-          Disponibles dans de nombreuses jardineries au Québec et dans l’est de l’Ontario.
-          Pour connaître nos points de vente, écrivez-nous à 
-          <!-- Lien pour écrire un courriel -->
-          <a href="mailto:info@lesserresaquafolia.com">info@lesserresaquafolia.com</a>
+          Nos produits sont disponibles dans les meilleures jardineries au Québec et dans l’est de l’Ontario.  Pour connaître nos points de vente, communiquez avec nous par courriel à <a href="mailto:info@lesserresaquafolia.com">info@lesserresaquafolia.com</a>
         </p>
       </section>
-
-      <!-- ================== FORMULAIRE D’ACCÈS MEMBRE ================== -->
-      <div class="login-form">
-        <section class="login-form">
-          <h3>Accès membre :</h3>
-
-          <!-- Formulaire pour les paysagistes -->
-          <form>
-            <label for="paysagistes">Paysagistes</label><br>
-            <!-- Champ de saisie pour entrer un mot de passe -->
-            <input type="password" id="paysagistes" name="paysagistes" placeholder="Mot de passe" /><br>
-            <button type="submit">Valider</button>
-          </form>
-
-          <!-- Formulaire pour les centres-jardin -->
-          <form>
-            <label for="centre-jardin">Centre-Jardin</label><br>
-            <!-- Champ de saisie pour entrer un mot de passe -->
-            <input type="password" id="centre-jardin" name="centre-jardin" placeholder="Mot de passe" /><br>
-            <button type="submit">Valider</button>
-          </form>
-        </section>
-      </div>
-      
-      <!-- ================== SECTION BAS DE PAGE (ACCUEIL) ================== -->
-      <div class="Acceuil-bottom-section">
-        <!-- Image décorative située en bas de la page d’accueil -->
-        <img src="../Images/section_accueil.png" alt="image_fin">
-
-        <!-- Lien vers la page des types de plantes avec un bouton stylisé -->
-        <a href="../html/type-plantes.html">
-          <button class="green-button-opacity">Pour en savoir plus sur nos plantes</button>
-        </a>
-      </div>
-
-      <!-- ================== SCRIPT RESPONSIVE POUR LE MENU ================== -->
-      <script>
-        // Fonction appelée au clic sur le bouton ☰ pour afficher ou cacher le menu
-        function toggleMenu() {
-          const menu = document.getElementById("dropdownMenu");
-          // Ajoute ou retire la classe "show" pour afficher ou cacher le menu
-          menu.classList.toggle("show");
-        }
-      </script>
+<div class="login-form">
+      <section class="login-form">
+        <h3>Accès membre :</h3>
+        <form>
+          <label for="paysagistes">Paysagistes</label><br>
+          <input type="password" id="paysagistes" name="paysagistes" placeholder="Mot de passe" /><br>
+          <button type="submit">Valider</button>
+        </form>
+        <form>
+          <label for="centre-jardin">Centre-Jardin</label><br>
+          <input type="password" id="centre-jardin" name="centre-jardin" placeholder="Mot de passe" /><br>
+          <button type="submit">Valider</button>
+        </form>
+      </section>
     </div>
-  </main>
+    
+<div class="Acceuil-bottom-section">
+  <img src="../Images/section_accueil.png" alt="image_fin">
+  <a href="../html/type-plantes.html">
+    <button class="green-button-opacity">Pour en savoir plus sur nos plantes</button>
+  </a>
+</div>
 
-  <!-- ================== PIED DE PAGE ================== -->
-  <footer class="footer">
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("dropdownMenu");
+      menu.classList.toggle("show");
+    }
+  </script>
+</main>
+<footer class="footer">
     <div class="footer-content">
-      <!-- Affichage stylisé du nom de l’entreprise -->
       <div class="logos">
         <div class="logo-serres">LES SERRES</div>
         <div class="logo-aquafolia">AQUAFOLIA</div>
       </div>
-
-      <!-- Adresse courriel de contact et droits d’auteur -->
       <div class="email-container">
         <a href="mailto:info@lesserresaquafolia.com" class="email">info@lesserresaquafolia.com</a>
         <p class="droits">©2025 Vicky et Assil, Montmorency. Tous droits réservés.</p>
       </div>
     </div>
-
-    <!-- Section vide pour ajouter d'autres éléments plus tard -->
     <div class="footer-right"></div>
   </footer>
 </body>
