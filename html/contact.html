@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contact</title>
-  <link rel="stylesheet" href="../css/styles-VRJ.css">
   <link rel="stylesheet" href="../css/main.css">
+  
 </head>
 <body>
   <header>
@@ -22,32 +22,28 @@
     </nav>
   </header>
 
-  <div class="container">
+   <main class="contenu">
+    <div class="titre-contact">Contact</div>
 
-    <h1 class="title">Contact</h1>
-
-    <div class="description">
-      <p>
-        Nous avons un grand choix de plantes aquatiques, plantes d’aquariums et plantes de berge.
-        Pour connaître nos points de vente ou pour toute question concernant, n’hésitez pas à communiquer avec nous.
-      </p>
+    <div class="info-contact">
+      Nous avons un grand choix de plantes aquatiques, plantes d’aquariums et plantes de berge.  
+      Pour connaître nos points de vente ou pour toute question concernant, n’hésitez pas à communiquer avec nous.
     </div>
 
-    <form class="contact-form">
-      <label for="nom">Nom :</label>
-      <input type="text" id="nom" name="nom" required>
+    <form class="formulaire">
+      <div class="ligne-double">
+        <input type="text" placeholder="Nom:" class="champ">
+        <input type="number" placeholder="Téléphone:" class="champ">
+      </div>
 
-      <label for="telephone">Téléphone :</label>
-      <input type="tel" id="telephone" name="telephone" required>
+      <input type="email" placeholder="Email:" class="champ">
 
-      <label for="email">Email :</label>
-      <input type="email" id="email" name="email" required>
+      <div class="commentaire-section">
+        <label for="commentaire">Commentaire:</label>
+        <textarea id="commentaire" name="commentaire"></textarea>
+      </div>
 
-      <label for="commentaire">Commentaire :</label>
-      <textarea id="commentaire" name="commentaire" rows="4"></textarea>
-
-      <button type="submit">Envoyer</button>
-    </form>
+      <button type="submit" class="bouton-envoyer">Envoyer</button>
   
     <Footer>
       <a href="mailto:info@lesserresaquafolia.com">info@lesserresaquafolia.com</a> <br>
