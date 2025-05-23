@@ -307,267 +307,166 @@ main {
 }
 
 /* Footer */
-footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  width: 100%;
-  padding: 20px;
-  font-size: 16px;
-}
+ 
 
-/* Responsive - Desktop */
-@media (min-width: 768px) {
+    .footer {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: var(--gris-fonce);
+      color: white;
+      font-family: Arial, sans-serif;
+      padding: 30px 10px;
+      width: 100%;
+      max-width: 1200px;
+    }
 
-/* garder l'image parfaitement visibile */
-  header img {
-    max-height: 160px;
-    width: 100%;   
-  }
+    .footer-content {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+    }
 
+    .logos {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
 
-  .menu-button {
-    display: none;
-  }
+    .logo-serres,
+    .logo-aquafolia {
+      background-color: white;
+      color: var(--vert-fonce);
+      font-weight: bold;
+      padding: 4px 10px;
+      display: inline-block;
+      font-size: 22px;
+      font-family: "Georgia", serif;
+      width: fit-content;
+    }
 
-  /* Faire disparaitre notre menu burger + Stylisation du menu classique*/
-  .dropdown {
-    display: flex !important;
-    position: static;
-    flex-direction: row;
-    justify-content: center;
-    background: none;
-    padding: 20px;
-    width: 100%;
-    gap: 20px;
-  }
+    .logo-aquafolia {
+      font-size: 30px;
+      position: relative;
+    }
 
-  .dropdown a {
-    background-color: #4CAF50;
-    border-radius: 20px;
-    padding: 25px 30px;
-    font-size: 18px;
-    color: white;
-    font-weight: bold;
-    text-align: center;
-    transition: background-color 0.3s;
-  }
+    .logo-aquafolia::after {
+      content: "";
+      display: block;
+      height: 6px;
+      background-color: var(--vert-fonce);
+      width: 100%;
+      transform: skewX(-15deg);
+      margin-top: 2px;
+    }
 
-  .dropdown a:hover {
-    background-color: #45a049;
-  }
+    .email-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
 
-  /* Styliser le menu */
-  .menu-container {
-    text-align: center;
-    padding: 0;
-    background-color: #2c2c2c;
-  }
+    .email {
+      font-size: 18px;
+      color: white;
+      text-decoration: underline;
+      transition: color 0.3s;
+      font-family: var(--font-tt);
+    }
 
-  /* Modifier le texte pour une meilleur lisibiliter */
+    .email:hover {
+      color: var(--vert-pale);
+    }
 
-  .main-content {
-    flex-direction: row;
-    align-items: flex-start;
-  }
+    .email:active {
+      color: var(--vert-fonce);
+    }
 
-  .content {
-    flex: 0 0 60%;
-  }
+    .footer-right {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 150px;
+      height: 150px;
+      border-radius: 20px 0 0 0;
+      overflow: hidden;
+      background: linear-gradient(45deg, #4CAF50, #45a049);
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+          background-image: url('../Images/grenouille.png');
+      font-size: 2rem;
+    }
 
-/* faire apparaitre le login forme + Stylisation pour qu'il soit a gauche a coté du */
-  .login-form {
+    .email-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .droits {
+      font-size: 14px;
+      color: white;
+      margin-top: 5px;
+      font-family: var(--font-tt);
+    }
+
+    @media (max-width: 768px) {
+      .footer-right {
+        display: none;
+    width: 200px; 
+    height: 150px; 
+    background-image: url('../Images/grenouille.png');
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: center;
     display: block;
-    flex: 0 0 30%;
-  }
+      }    }
+      
+      .logos {
+        display: none;
+      }
+      
+      .email-container {
+        position: static;
+        transform: none;
+      }
+      
+      .footer {
+        justify-content: center;
+        text-align: center;
+        padding: 40px 10px;
+      }
+    
 
-  .image-section {
-    width: 60%;
-  }
+    @media (max-width: 350px) {
+      .logos {
+        gap: 10px;
+      }
+      
+      .logo-serres,
+      .logo-aquafolia {
+        font-size: 18px;
+        padding: 3px 8px;
+      }
+      
+      .logo-aquafolia {
+        font-size: 24px;
+      }
 
-  .login-wrapper {
-    width: 35%;
-  }
-
-  .plant-section {
-    flex-direction: row;
-    align-items: flex-start;
-  }
-
-  .plant-text {
-    flex: 2;
-    padding-right: 30px;
-  }
-
-  .plant-images {
-    flex-direction: column;
-    flex: 1;
-  }
-
-  .plant-images img {
-  width: 100%;
-}
-
-  .footer {
-    bottom: 0;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@font-face {
-  font-family: 'tt_rounds_neue';
-  src: url('/polices/tt_rounds_neue/TT\ Rounds\ Neue\ Trial\ Black.ttf'),
-}
-
-.footer {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: var(--gris-fonce);
-  color: white;
-  font-family: Arial, sans-serif;
-  padding: 10px 10px 15px 10px;
-}
-
-.footer-content {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-}
-
-.logos {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.logo-serres,
-.logo-aquafolia {
-  background-color: white;
-  color: var(--vert-fonce);
-  font-weight: bold;
-  padding: 4px 10px;
-  display: inline-block;
-  font-size: 22px;
-  font-family: "Georgia", serif;
-  width: fit-content;
-}
-
-.logo-aquafolia {
-  font-size: 30px;
-  position: relative;
-}
-
-.logo-aquafolia::after {
-  content: "";
-  display: block;
-  height: 6px;
-  background-color: var(--vert-fonce);
-  width: 100%;
-  transform: skewX(-15deg);
-  margin-top: 2px;
-}
-
-.email-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.email {
-  font-size: 18px;
-  color: white;
-  text-decoration: underline;
-  transition: color 0.3s;
-  font-family: var(--font-tt);
-}
-
-.email:hover {
-  color: var(--vert-pale);
-}
-
-.email:active {
-  color: var(--vert-fonce);
-}
-
-.footer-right {
-  position: absolute;
-  right: 20px;
-  top: -152px;
-  /* ← dépassement vers le haut */
-  width: 260px;
-  height: 260px;
-  border-radius: 30px;
-  overflow: hidden;
-  background-image: url("./Images/grenouille.png");
-  background-size: cover;
-  background-position: center;
-}
-
-.email-block {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.droits {
-  font-size: 14px;
-  color: white;
-  margin-top: 5px;
-  font-family: var(--font-tt);
-}
-
-
+      .footer {
+        padding: 35px 10px;
+      }
+    }
 
 /* Menu */
-        :root {
-            --gris-fonce: #3C3C3C;
-            --vert-fonce: #2F8032;
-            --vert-pale: #7FBE77;
-            --cyan: #91B7A4;
-            --blanc-rose: #F1E8F4;
-            --font-inknut: 'Inknut_Antiqua', sans-serif;
-            --font-tt: 'tt_rounds_neue', sans-serif;
-        }
-
+     
         * {
             box-sizing: border-box;
         }
@@ -655,7 +554,7 @@ footer {
                 text-align: center;
                 padding: 0;
                 background-color: var(--gris-fonce);
-                height: 80px; /* Barre plus haute */
+                height: 80px;
                 position: relative;
                 overflow: visible;
                 z-index: 1;
