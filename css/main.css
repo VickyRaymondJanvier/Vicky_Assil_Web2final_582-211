@@ -534,7 +534,7 @@ main {
 
 
 @font-face {
-  font-family: 'tt_rounds_neue';
+  font-family: tt_rounds_neue;
   src: url('/polices/tt_rounds_neue/TT\ Rounds\ Neue\ Trial\ Black.ttf'),
 }
 
@@ -663,6 +663,7 @@ body {
   background-color: #fff;
   color: var(--gris-fonce);
 }
+
 
 @font-face {
   font-family: 'Inknut_Antiqua';
