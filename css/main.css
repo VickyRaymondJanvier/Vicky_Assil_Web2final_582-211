@@ -749,3 +749,52 @@ main {
     font-size: 24px;
   }
 }
+
+
+/*Animation*/
+    .wiggle-plant {
+      width: 50px;
+      padding: 10px;
+      animation: wiggle 0.8s infinite;
+      transform-origin: center bottom;
+    }
+    
+    @keyframes wiggle {
+      0%   { transform: rotate(-5deg); }
+      25%  { transform: rotate(5deg); }
+      50%  { transform: rotate(-3deg); }
+      75%  { transform: rotate(3deg); }
+      100% { transform: rotate(0deg); }
+    }
+
+
+
+
+
+/* 
+Changement fait a partir de vos remarques
+
+Animation menu hamburger
+Ne pas mettre le logo serre aquafolia en banniere immense
+Le meme footer partout
+Garde la section plus d'infos dans accueil
+le email dans le footer te redirigeant vers tes emails
+Refaire la page d'accueil dans le meme style que les autres et meme couleurs de fond
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
