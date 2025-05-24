@@ -1,22 +1,52 @@
-footer* {
+/* ============================================
+   VARIABLES CSS ET POLICES
+============================================ */
+
+:root {
+  --gris-fonce: #3C3C3C;
+  --vert-fonce: #2F8032;
+  --vert-pale: #7FBE77;
+  --cyan: #91B7A4;
+  --blanc-rose: #F1E8F4;
+  --vert-transparent: rgba(76, 175, 80, 0.8);
+  --font-inknut: 'Inknut_Antiqua', sans-serif;
+  --font-tt: 'tt_rounds_neue', sans-serif;
+}
+
+@font-face {
+  font-family: 'Inknut_Antiqua';
+  src: url('/assets/polices/Inknut_Antiqua/InknutAntiqua-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: tt_rounds_neue;
+  src: url('../assets/polices/tt_rounds_neue/TT\ Rounds\ Neue\ Trial\ Black.ttf');
+}
+
+/* ============================================
+   RESET ET STYLES DE BASE
+============================================ */
+
+* {
   box-sizing: border-box;
 }
 
-/* Base styles */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: #fff;
-  color: #333;
+  color: var(--gris-fonce);
 }
 
-/* Styles du header pour limiter sa taille et faire en sorte qu'il ne prennent pas trop de place */
+/* ============================================
+   HEADER
+============================================ */
 
 header {
+  font-family: var(--font-inknut);
   text-align: center;
   padding: 0;
   margin: 0;
-
 }
 
 header img {
@@ -29,12 +59,14 @@ header img {
   overflow: hidden;
 }
 
+/* ============================================
+   MENU NAVIGATION
+============================================ */
 
-/* Menu burger par défaut (mobile) */
 .menu-container {
   position: relative;
   padding: 10px;
-  background-color: #2c2c2c;
+  background-color: var(--gris-fonce);
   text-align: right;
 }
 
@@ -47,8 +79,6 @@ header img {
   color: white;
 }
 
-/* styles de la version desktop + cacher */
-
 .dropdown {
   display: none;
   position: absolute;
@@ -59,6 +89,8 @@ header img {
   overflow: hidden;
   z-index: 1;
   width: 70%;
+  margin: 0;
+  padding: 0;
 }
 
 .dropdown li {
@@ -73,19 +105,26 @@ header img {
   text-align: center;
   font-size: 18px;
   font-weight: bold;
+  transition: background-color 0.3s;
 }
-
-/* Ajout d'un effect de hover */
 
 .dropdown a:hover {
   background-color: #45a049;
+}
+
+.dropdown a.active {
+  background-color: var(--vert-fonce);
+  font-weight: bolder;
 }
 
 .show {
   display: block;
 }
 
-/* Contenu principal */
+/* ============================================
+   CONTENU PRINCIPAL
+============================================ */
+
 main {
   padding: 20px;
   max-width: 1100px;
@@ -101,7 +140,6 @@ main {
   margin: 29px 0;
   padding: 40px;
   flex-wrap: wrap;
-  /* Pour être responsive et que le texte reste lisible en tout temp */
 }
 
 .content {
@@ -114,143 +152,11 @@ main {
   line-height: 1.6;
 }
 
-/* Stylisation de l'image en bas de page */
+/* ============================================
+   SECTIONS SPÉCIFIQUES
+============================================ */
 
-
-.Acceuil-bottom-section {
-  position: relative;
-  width: 100%;
-  max-width: 100%;
-  margin-top: 40px;
-}
-
-.Acceuil-bottom-section img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.Acceuil-bottom-section a {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-decoration: none;
-}
-
-/* Faire hover un bouton vert relier a une page différente, qui permet de naviguer vers une autre page */
-
-.green-button-opacity {
-  background-color: #4CAF50;
-  color: white;
-  padding: 15px 25px;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  opacity: 0.9;
-  cursor: pointer;
-  transition: opacity 0.3s ease;
-}
-
-.green-button-opacity:hover {
-  opacity: 1;
-}
-
-
-.green-button {
-  display: block;
-  width: 80%;
-  margin: 20px auto;
-  background-color: rgba(76, 175, 80, 0.4);
-  color: white;
-  padding: 15px;
-  font-size: 16px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.green-button:hover {
-  background-color: rgba(76, 175, 80, 0.6);
-}
-
-/* Stylisation de l'image en elle-meme */
-
-.image-section {
-  text-align: center;
-  margin-top: 20px;
-  position: relative;
-}
-
-.image-section img {
-  width: 100%;
-  height: auto;
-}
-
-/******* Ajouter un formulaire de connection pour desktop *******/
-
-*******
-
-/* Formulaire de connexion */
-.login-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-/* Stylisation et cacher en format mobile */
-
-.login-form {
-  display: none;
-  background-color: #d5f2dc;
-  padding: 20px;
-  border-radius: 10px;
-  margin-top: 10px;
-}
-
-.login-form h3 {
-  margin-top: 0;
-}
-
-.login-form label {
-  display: block;
-  margin: 10px 0 5px;
-}
-
-.login-form input {
-  width: 93%;
-  padding: 8px;
-  margin-bottom: 10px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-}
-
-.login-form button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  width: 100%;
-}
-
-.login-button {
-  margin-top: 10px;
-  background-color: #4CAF50;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.login-button:hover {
-  background-color: #45a049;
-}
-
-/* Bannière arrondie verte */
+/* Bannière */
 .banner {
   background-color: #4CAF50;
   color: white;
@@ -263,7 +169,7 @@ main {
   border-radius: 20px;
 }
 
-/* Section plantes flottantes */
+/* Section plantes */
 .plant-section {
   display: flex;
   flex-direction: column;
@@ -305,6 +211,138 @@ main {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Section d'accueil avec image */
+.Acceuil-bottom-section {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin-top: 40px;
+}
+
+.Acceuil-bottom-section img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.Acceuil-bottom-section a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-decoration: none;
+}
+
+.image-section {
+  text-align: center;
+  margin-top: 20px;
+  position: relative;
+}
+
+.image-section img {
+  width: 100%;
+  height: auto;
+}
+
+/* ============================================
+   BOUTONS
+============================================ */
+
+.green-button-opacity {
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  opacity: 0.9;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.green-button-opacity:hover {
+  opacity: 1;
+}
+
+.green-button {
+  display: block;
+  width: 80%;
+  margin: 20px auto;
+  background-color: rgba(76, 175, 80, 0.4);
+  color: white;
+  padding: 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.green-button:hover {
+  background-color: rgba(76, 175, 80, 0.6);
+}
+
+.login-button {
+  margin-top: 10px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #45a049;
+}
+
+/* ============================================
+   FORMULAIRES
+============================================ */
+
+/* Formulaire de connexion */
+.login-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.login-form {
+  display: none;
+  background-color: #d5f2dc;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.login-form h3 {
+  margin-top: 0;
+}
+
+.login-form label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+.login-form input {
+  width: 93%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.login-form button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Formulaire de contact */
 .contenu {
   display: flex;
   flex-direction: column;
@@ -401,142 +439,9 @@ main {
   background-color: var(--vert-fonce);
 }
 
-/* Responsive - Desktop */
-@media (min-width: 768px) {
-
-  /* garder l'image parfaitement visibile */
-  header img {
-    max-height: 200px;
-    width: 100%;
-  }
-
-
-  .menu-button {
-    display: none;
-  }
-
-  /* Faire disparaitre notre menu burger + Stylisation du menu classique*/
-  .dropdown {
-    display: flex !important;
-    position: static;
-    flex-direction: row;
-    justify-content: center;
-    background: none;
-    padding: 20px;
-    width: 100%;
-    gap: 20px;
-  }
-
-  .dropdown a {
-    background-color: #4CAF50;
-    border-radius: 20px;
-    padding: 25px 30px;
-    font-size: 18px;
-    color: white;
-    font-weight: bold;
-    text-align: center;
-    transition: background-color 0.3s;
-  }
-
-  .dropdown a:hover {
-    background-color: #45a049;
-  }
-
-  /* Styliser le menu */
-  .menu-container {
-    text-align: center;
-    padding: 0;
-    background-color: #2c2c2c;
-  }
-
-  /* Modifier le texte pour une meilleur lisibiliter */
-
-  .main-content {
-    flex-direction: row;
-    align-items: flex-start;
-  }
-
-  .content {
-    flex: 0 0 60%;
-  }
-
-  /* faire apparaitre le login forme + Stylisation pour qu'il soit a gauche a coté du */
-  .login-form {
-    display: block;
-    flex: 0 0 30%;
-  }
-
-  .image-section {
-    width: 60%;
-  }
-
-  .login-wrapper {
-    width: 35%;
-  }
-
-  .plant-section {
-    flex-direction: row;
-    align-items: flex-start;
-  }
-
-  .plant-text {
-    flex: 2;
-    padding-right: 30px;
-  }
-
-  .plant-images {
-    flex-direction: column;
-    flex: 1;
-  }
-
-  .plant-images img {
-    width: 100%;
-  }
-
-  .footer {
-    bottom: 0;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@font-face {
-  font-family: tt_rounds_neue;
-  src: url('/polices/tt_rounds_neue/TT\ Rounds\ Neue\ Trial\ Black.ttf'),
-}
+/* ============================================
+   FOOTER
+============================================ */
 
 .footer {
   position: relative;
@@ -596,6 +501,15 @@ main {
   text-align: center;
 }
 
+.email-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  height: 100%;
+}
+
 .email {
   font-size: 18px;
   color: white;
@@ -612,27 +526,6 @@ main {
   color: var(--vert-fonce);
 }
 
-.footer-right {
-  position: absolute;
-  right: 20px;
-  top: -152px;
-  /* ← dépassement vers le haut */
-  width: 260px;
-  height: 260px;
-  border-radius: 30px;
-  overflow: hidden;
-  background-image: url("./Images/grenouille.png");
-  background-size: cover;
-  background-position: center;
-}
-
-.email-block {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
 .droits {
   font-size: 14px;
   color: white;
@@ -640,99 +533,31 @@ main {
   font-family: var(--font-tt);
 }
 
-
-
-/* Menu */
-:root {
-  --gris-fonce: #3C3C3C;
-  --vert-fonce: #2F8032;
-  --vert-pale: #7FBE77;
-  --cyan: #91B7A4;
-  --blanc-rose: #F1E8F4;
-  --font-inknut: 'Inknut_Antiqua', sans-serif;
-  --font-tt: 'tt_rounds_neue', sans-serif;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #fff;
-  color: var(--gris-fonce);
-}
-
-
-@font-face {
-  font-family: 'Inknut_Antiqua';
-  src: url('/polices/Inknut_Antiqua/InknutAntiqua-Light.ttf') format('truetype');
-}
-
-header {
-  font-family: var(--font-inknut);
-}
-
-.menu-container {
-  position: relative;
-  padding: 10px;
-  background-color: var(--gris-fonce);
-  text-align: right;
-}
-
-.menu-button {
-  font-size: 24px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  display: inline-block;
-  color: white;
-}
-
-.dropdown {
-  display: none;
+.footer-right {
   position: absolute;
-  right: 10px;
-  top: 45px;
-  background-color: #4CAF50;
-  border-radius: 5px;
+  right: 0px;
+  top: -35px;
+  width: 180px;
+  height: 180px;
+  border-radius: 25px;
   overflow: hidden;
-  z-index: 1;
-  width: 70%;
-  margin: 0;
-  padding: 0;
+  background-image: url("../Images/grenouille.png");
+  background-size: cover;
+  background-position: center;
 }
 
-.dropdown li {
-  list-style: none;
-}
-
-.dropdown a {
-  display: block;
-  padding: 15px;
-  text-decoration: none;
-  color: white;
-  text-align: center;
-  font-size: 18px;
-  font-weight: bold;
-  transition: background-color 0.3s;
-}
-
-.dropdown a:hover {
-  background-color: #45a049;
-}
-
-.dropdown a.active {
-  background-color: var(--vert-fonce);
-  font-weight: bolder;
-}
-
-.show {
-  display: block;
-}
+/* ============================================
+   RESPONSIVE - DESKTOP
+============================================ */
 
 @media (min-width: 768px) {
+  /* Header Desktop */
+  header img {
+    max-height: 200px;
+    width: 100%;
+  }
+
+  /* Menu Desktop */
   .menu-button {
     display: none;
   }
@@ -742,7 +567,6 @@ header {
     padding: 0;
     background-color: var(--gris-fonce);
     height: 80px;
-    /* Barre plus haute */
     position: relative;
     overflow: visible;
     z-index: 1;
@@ -799,5 +623,129 @@ header {
     background-color: var(--vert-fonce);
     padding: 20px 30px;
     box-shadow: 0 6px 16px rgba(47, 128, 50, 0.5);
+  }
+
+  /* Contenu principal Desktop */
+  .main-content {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .content {
+    flex: 0 0 60%;
+  }
+
+  .login-form {
+    display: block;
+    flex: 0 0 30%;
+  }
+
+  .image-section {
+    width: 60%;
+  }
+
+  .login-wrapper {
+    width: 35%;
+  }
+
+  /* Section plantes Desktop */
+  .plant-section {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .plant-text {
+    flex: 2;
+    padding-right: 30px;
+  }
+
+  .plant-images {
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .plant-images img {
+    width: 100%;
+  }
+
+  /* Footer Desktop */
+  .footer {
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+  .email-block {
+    flex: 1;
+  }
+}
+
+/* ============================================
+   RESPONSIVE - MOBILE
+============================================ */
+
+@media (max-width: 768px) {
+  .footer-right {
+    display: none;
+  }
+
+  .logos {
+    display: none;
+  }
+
+  .email-container {
+    position: static;
+    transform: none;
+  }
+
+  .footer {
+    justify-content: center;
+    text-align: center;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .email-block {
+    justify-content: center;
+    height: auto;
+  }
+}
+
+/* ============================================
+   RESPONSIVE - TABLETTE
+============================================ */
+
+@media (max-width: 899px) and (min-width: 769px) {
+  .logos {
+    gap: 12px;
+  }
+
+  .logo-serres,
+  .logo-aquafolia {
+    font-size: 20px;
+    padding: 3px 8px;
+  }
+
+  .logo-aquafolia {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 350px) {
+  .logos {
+    gap: 10px;
+  }
+
+  .logo-serres,
+  .logo-aquafolia {
+    font-size: 18px;
+    padding: 3px 8px;
+  }
+
+  .logo-aquafolia {
+    font-size: 24px;
   }
 }
